@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="language-selector">
+            <select id="language-select">
+                <option value="en">🇬🇧 English</option>
+                <option value="he">🇮🇱 עברית</option>
+            </select>
+        </div>
+        <h1 id="title">Shopping List</h1>
+        <div class="buttons">
+            <button id="clear-list-button">Clear List</button>
+            <button id="load-list-button">Load List</button>
+            <input type="file" id="load-list-input" accept=".json" style="display: none;">
+            <button id="load-default-list-button">Load Default List</button>
+            <input type="text" id="export-file-name" placeholder="File name" value="list">
+            <button id="export-list-button">Export List</button>
+        </div>
+        <form id="add-item-form">
+            <input type="text" id="item-name" placeholder="Item" required>
+            <input type="number" id="item-qty" placeholder="Qty" required>
+            <select id="item-category">
+                <option value="">Select Category</option>
+                <option value="Fruits">Fruits</option>
+                <option value="Vegetables">Vegetables</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Bakery">Bakery</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="text" id="new-category" placeholder="New Category" style="display: none;">
+            <button type="submit">Add Item</button>
+        </form>
+        <div id="shopping-list-container">
+            <!-- Shopping list items will be grouped by category here dynamically -->
+        </div>
+        <h2 id="bought-items-title">Bought Items</h2>
+        <div id="bought-list-container">
+            <!-- Bought items will be grouped by category here dynamically -->
+        </div>
+        <h2 id="pending-items-title">Pending Items</h2>
+        <div id="pending-list-container">
+            <!-- Pending items will be grouped by category here dynamically -->
+        </div>
+    </div>
+    <script src="scripts/addItem.js"></script>
+    <script src="scripts/clearList.js"></script>
+    <script src="scripts/loadList.js"></script>
+    <script src="scripts/loadDefaultList.js"></script>
+    <script src="scripts/exportList.js"></script>
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/categories.js"></script>
+    <script src="scripts/language.js"></script>
+</body>
+</html>
