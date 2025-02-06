@@ -9,13 +9,13 @@ const elements = {
     }
 };
 
-    for (const id in elements) {
-        const element = document.getElementById(id);
-        if (element) {
-            if (element.tagName === 'INPUT') {
-                element.placeholder = elements[id][language] || element.placeholder;
-            } else {
-                element.textContent = elements[id][language] || element.textContent;
+for (const id in elements) {
+    const element = document.getElementById(id);
+    if (element) {
+        if (element.tagName === 'INPUT') {
+            element.placeholder = elements[id][language] || element.placeholder;
+        } else {
+            element.textContent = elements[id][language] || element.textContent;
         }
     }
 }

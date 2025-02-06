@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Shopping List</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -57,5 +57,18 @@
     <script src="scripts/utility.js"></script>
     <script src="scripts/categories.js"></script>
     <script src="scripts/language.js"></script>
+    <script>
+        document.addEventListener('touchstart', function(event) {
+            // Handle touch start event
+        }, false);
+
+        document.addEventListener('touchmove', function(event) {
+            // Handle touch move event
+        }, false);
+
+        document.addEventListener('touchend', function(event) {
+            // Handle touch end event
+        }, false);
+    </script>
 </body>
 </html>
